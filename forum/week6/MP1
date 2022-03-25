@@ -15,12 +15,13 @@ public class MP1 {
         numbers[y]=input.nextInt();
         
     }
-    System.out.print("The value are: [");
-    for (int i = 0; i < NOI; i++) {
-        if (i < NOI - 1)//as array starts from 0, it is minused by 1
-            System.out.print(numbers[i]+ " ");
+    System.out.print("The values are: [");
+    
+    for (int y = 0; y < NOI; y++) {
+        if (y < NOI - 1)//as array starts from 0, it is minused by 1
+            System.out.print(numbers[y]+ " ");
         else
-            System.out.print(numbers[i]+ " ");
+            System.out.print(numbers[y]+ " ");
     }
     System.out.print("]");
  }
