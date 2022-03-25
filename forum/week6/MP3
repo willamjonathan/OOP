@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class MP3 {
+    public static void main (String[] args){
+        int sum=0,a=0,b=100; //a = max, b = min ; initializing sum,a,b
+        Scanner number = new Scanner(System.in);
+        System.out.print("Enter the number of students: ");
+        int input1 = number.nextInt();//first input of the number of students
+        int grades[] = new int[input1];//defining and initializing grades []
+
+        for(int i = 0; i < input1; i++){
+            int z = i+1;
+            System.out.print("Enter the grade for student "+z+" : ");
+            grades[i] = number.nextInt();
+            sum += grades[i];//the total of the grade is in here
+
+            if(grades[i]>a){ //logic if the grade is greater than 0 then, grade will be a; to find out max
+                a = grades[i];
+                
+            }
+            if(grades[i]<b){//logic if grade is lower than 100 then grade will be b; to find out the minimum
+                b = grades[i];
+            }
+            
+        }
+
+        System.out.print("The average is: "+ sum/input1); //average is total divided by the n or number of the sum
+        System.out.println();
+        System.out.print("The minimum is: "+b);
+        System.out.println();
+        System.out.print("The maximum is: "+a);
+
+
+    }
+}
