@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+
+public class MP2 {
+    public static void main(String[] args){
+        PrintArrayInStars();//calling the program printarrayinstars
+
+    }
+
+    static void PrintArrayInStars(){
+        int[] array;//intializing array as an array
+        System.out.print("Enter the number of items: ");
+        Scanner input1 = new Scanner(System.in);
+        int input = input1.nextInt();//for 1 input of the number of items
+        System.out.print("Enter the value of items(seperated by space):  ");
+        array = new int[input];//defining array array
+        
+        for (int i = 0; i <input;i++){
+            array[i] = input1.nextInt(); //multiple input by for loop
+        }
+
+        for (int i = 0; i <input;i++){
+            System.out.print(i+" : "); 
+            for(int x = 0;x<array[i];x++ ){
+                System.out.print("*");//printing the stars according to the number in array (array[i])
+            }
+            System.out.print("("+array[i]+")");//printing the (total stars)
+            System.out.println();//seperating the printing by new line
+
+        }
+
+    }
+}
