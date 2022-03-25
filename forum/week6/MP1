@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class MP1 {
+ public static void main(String[] args) {
+     PrintArray(); // calling the program printarray
+ }   
+ static void PrintArray() {
+    int[] numbers; //initializing numbers as an array
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter the number of items: ");
+    int NOI = input.nextInt();//NOI as input from the number of items
+    System.out.print("Enter the value of items(seperated by space): ");
+    numbers = new int[NOI];// defining the numbers array 
+    for (int y = 0;y<NOI;y++){ //asking for multiple input using for loop
+        numbers[y]=input.nextInt();
+        
+    }
+    System.out.print("The value are: [");
+    for (int i = 0; i < NOI; i++) {
+        if (i < NOI - 1)//as array starts from 0, it is minused by 1
+            System.out.print(numbers[i]+ " ");
+        else
+            System.out.print(numbers[i]+ " ");
+    }
+    System.out.print("]");
+ }
+}
