@@ -29,13 +29,6 @@ public class Bank {
     public Customer getCustomers(int index) {
         return customers.get(index);
     }
-    //peter's code
-    public Customer getCustomerName(String name){
-        for(int i = 0; i < numberOfCustomers; i++){
-            if(Objects.equals(name, this.customers.get(i).getLastName())){
-                return this.customers.get(i);
-            }
-        }return null;
-    }
+    
     
 }
